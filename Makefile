@@ -44,6 +44,7 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 clean: title_clean
 	-rm -f $(OBJ)
 	-rmdir $(OBJ_DIR)
+	-rm -f *.a
 
 fclean: clean
 	-rm -f $(NAME)
