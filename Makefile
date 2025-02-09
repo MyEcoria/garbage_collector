@@ -52,7 +52,7 @@ fclean: clean
 	-rm -f unit_tests
 
 test: re
-	$(CC) -o docker examples/create.c $(NAME).a $(CFLAGS) -g
+	$(CC) -o $(NAME) examples/test.c $(NAME).a $(CFLAGS) -g
 	@printf "$(YELLOW)[STATUS]$(RESET)" $(2)
 	@printf " Compilation du test terminé: $(BLUE)$(NAME)$(RESET)\n" $(2)
 
