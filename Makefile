@@ -7,7 +7,7 @@
 
 CC	=	gcc
 MAKE	=	make
-NAME	=	garbage
+NAME	=	libgarbage
 SRC_DIR	=	src
 OBJ_DIR	=	obj
 
