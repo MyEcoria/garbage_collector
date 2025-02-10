@@ -79,3 +79,19 @@ void *gc_realloc(void *ptr, size_t size)
     }
     return (NULL);
 }
+
+void *gc_custom(void *new_malloc)
+{
+    garbage_t *new = malloc(sizeof(garbage_t));
+
+    if (new == NULL)
+        return (NULL);
+    new->ptr = new_malloc;
+    if (new->ptr == NULL) {
+        free(new);
+        return (NULL);
+    }
+    new->next = (garbage_t *)garbage;
+    garbage = new;
+    return (new->ptr);
+}
